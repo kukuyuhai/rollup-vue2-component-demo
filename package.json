@@ -1,11 +1,16 @@
 {
-  "name": "chinadeplogin",
+  "name": "@walker/jssdk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "chinadep",
+  "main": "./dist/lib.esm.js",
+  "files": [
+    "dist",
+    "index.html"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "npx rollup -c -w"
+    "dev": "npx rollup -c -w",
+    "build": "npx rollup -c rollup.config.js"
   },
   "author": "",
   "license": "ISC",
