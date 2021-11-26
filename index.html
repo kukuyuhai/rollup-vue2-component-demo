@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login SDK</title>
+</head>
+
+<body>
+  <div id="app">
+    <login-box></login-box>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./dist/lib.umd.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+    })
+    window.onload = function () {
+      console.log(union)
+      union.login();
+
+
+    };
+  </script>
+</body>
+
+</html>
