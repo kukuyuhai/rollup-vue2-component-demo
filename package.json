@@ -1,0 +1,14 @@
+{
+  "name": "chinadeplogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "only-allow": "^1.0.0"
+  }
+}
