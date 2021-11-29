@@ -1,0 +1,42 @@
+.section[data-v-08d377c8] {
+  margin-top: 30px;
+}
+.section .sub-title[data-v-08d377c8] {
+  height: 40px;
+  line-height: 40px;
+  background: rgba(53, 127, 237, 0.2);
+  text-indent: 40px;
+  margin-bottom: 5px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+}
+.section .sub-title .prohibit[data-v-08d377c8] {
+  width: 18px;
+  position: absolute;
+  left: 10px;
+  top: 11px;
+}
+.section .sub-title .arrow-right[data-v-08d377c8] {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid rgba(53, 127, 237, 0.6);
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.section .sub-title .arrow-bottom[data-v-08d377c8] {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid rgba(53, 127, 237, 0.6);
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+
+/*# sourceMappingURL=HttpSection.vue.map */

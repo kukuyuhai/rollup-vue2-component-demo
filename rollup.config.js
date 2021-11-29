@@ -1,21 +1,48 @@
-import resolve from "@rollup/plugin-node-resolve";
-import vue from "rollup-plugin-vue";
-import babel from "@rollup/plugin-babel";
-import commonjs from "@rollup/plugin-commonjs";
-import livereload from "rollup-plugin-livereload";
-import serve from "rollup-plugin-serve";
-import { terser } from "rollup-plugin-terser";
+import resolve from "@rollup/plugin-node-resolve"
+import vue from "rollup-plugin-vue"
+import babel from "@rollup/plugin-babel"
+import commonjs from "@rollup/plugin-commonjs"
+import livereload from "rollup-plugin-livereload"
+import serve from "rollup-plugin-serve"
+import { terser } from "rollup-plugin-terser"
+import alias from "@rollup/plugin-alias"
+import css from "rollup-plugin-css-only"
+import json from "@rollup/plugin-json"
+// import pkg from "./package.json"
 
 const config = {
   input: "./src/index.js", // 必须，入口文件
   output: [
-    { file: "dist/lib.umd.js", format: "umd" },
-    { file: "dist/lib.min.js", format: "cjs", plugins: [terser()] },
-    { file: "dist/lib.esm.js", format: "esm" },
+    {
+      file: "dist/chinadep.umd.js",
+      format: "umd",
+      name: "chinadep",
+      globals: {
+        lodash: "lodash",
+        vuex: "vuex",
+        "vue-codemirror": "vue-codemirror",
+      },
+    },
+    {
+      file: "dist/chinadep.min.js",
+      format: "iife",
+      name: "chinadep",
+      globals: {
+        lodash: "lodash",
+        vuex: "vuex",
+        "vue-codemirror": "vue-codemirror",
+      },
+    },
+    {
+      file: "dist/chinadep.esm.js",
+      format: "esm",
+      exports: "default",
+    },
   ],
-  external: ["vue"],
+  external: ["vuex", "element-ui", "jsonlint", "vue-codemirror", "lodash"],
   plugins: [
-    livereload(),
+    // livereload(),
+    json(),
     serve({
       open: true, // 自动打开页面
       port: 8080,
@@ -23,10 +50,10 @@ const config = {
       contentBase: "",
     }),
     // 引入的插件在这里配置
-    resolve(),
+    resolve({ preferBuiltins: true }),
     commonjs(),
     vue({
-      css: true,
+      css: false,
       compileTemplate: true,
       target: "browser",
     }),
@@ -34,7 +61,18 @@ const config = {
       exclude: "**/node_modules/**",
       babelHelpers: "bundled",
     }),
+    css({ output: "chinadep.bundle.css" }),
+    // alias
+    alias({
+      entries: [
+        { find: "@", replacement: "./src" },
+        {
+          find: "@modules",
+          replacement: "./src/modules",
+        },
+      ],
+    }),
   ],
-};
+}
 
-export default config;
+export default config

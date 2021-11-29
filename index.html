@@ -5,24 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login SDK</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jsonlint/1.6.0/jsonlint.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vuex/3.6.2/vuex.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="./vue-codemirror.js"></script>
 </head>
 
 <body>
   <div id="app">
     <login-box></login-box>
   </div>
-  <script src="https://unpkg.com/vue"></script>
-  <script src="./dist/lib.umd.js"></script>
+
+  <script src="./dist/chinadep.umd.js"></script>
   <script>
-    var app = new Vue({
+    var app = new Vue({ 
       el: '#app',
     })
-    window.onload = function () {
-      console.log(union)
-      union.login();
-
-
-    };
   </script>
 </body>
 
