@@ -1,4 +1,22 @@
-.section[data-v-08d377c8] {
+.api-desc[data-v-718b6363] {
+  padding-left: 14px;
+}
+.api-desc .type[data-v-718b6363] {
+  margin-top: 10px;
+}
+.api-desc__label[data-v-718b6363] {
+  font-size: 14px;
+}
+.api-desc__copy[data-v-718b6363] {
+  color: #357fed;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.disabled[data-v-718b6363] {
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=HttpUri.vue.map */.section[data-v-08d377c8] {
   margin-top: 30px;
 }
 .section .sub-title[data-v-08d377c8] {
@@ -66,25 +84,7 @@
   font-weight: bold;
 }
 
-/*# sourceMappingURL=CodemirrorTab.vue.map */.api-desc[data-v-718b6363] {
-  padding-left: 14px;
-}
-.api-desc .type[data-v-718b6363] {
-  margin-top: 10px;
-}
-.api-desc__label[data-v-718b6363] {
-  font-size: 14px;
-}
-.api-desc__copy[data-v-718b6363] {
-  color: #357fed;
-  margin-left: 8px;
-  cursor: pointer;
-}
-.disabled[data-v-718b6363] {
-  pointer-events: none;
-}
-
-/*# sourceMappingURL=HttpUri.vue.map */.code-mirror[data-v-8623d7ce] {
+/*# sourceMappingURL=CodemirrorTab.vue.map */.code-mirror[data-v-8623d7ce] {
   border: 1px solid #dfe6ec;
   box-sizing: border-box;
 }
