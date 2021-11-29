@@ -1,4 +1,31 @@
-.api-desc[data-v-718b6363] {
+.section[data-v-096cc92d] {
+  margin-top: 30px;
+}
+.section .tabs[data-v-096cc92d] {
+  height: 32px;
+  margin-bottom: 10px;
+}
+.section .tabs .tab-item[data-v-096cc92d] {
+  height: 100%;
+  width: 88px;
+  border: 1px solid #d9d9d9;
+  color: #666;
+  float: left;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+.section .tabs .tab-item[data-v-096cc92d]:not(:first-child) {
+  border-left: none;
+}
+.section .tabs .tab-item.active[data-v-096cc92d] {
+  border: 1px solid #357fed;
+  color: #357fed;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=CodemirrorTab.vue.map */.api-desc[data-v-718b6363] {
   padding-left: 14px;
 }
 .api-desc .type[data-v-718b6363] {
@@ -57,34 +84,7 @@
   top: 15px;
 }
 
-/*# sourceMappingURL=HttpSection.vue.map */.section[data-v-096cc92d] {
-  margin-top: 30px;
-}
-.section .tabs[data-v-096cc92d] {
-  height: 32px;
-  margin-bottom: 10px;
-}
-.section .tabs .tab-item[data-v-096cc92d] {
-  height: 100%;
-  width: 88px;
-  border: 1px solid #d9d9d9;
-  color: #666;
-  float: left;
-  line-height: 30px;
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
-}
-.section .tabs .tab-item[data-v-096cc92d]:not(:first-child) {
-  border-left: none;
-}
-.section .tabs .tab-item.active[data-v-096cc92d] {
-  border: 1px solid #357fed;
-  color: #357fed;
-  font-weight: bold;
-}
-
-/*# sourceMappingURL=CodemirrorTab.vue.map */.code-mirror[data-v-8623d7ce] {
+/*# sourceMappingURL=HttpSection.vue.map */.code-mirror[data-v-8623d7ce] {
   border: 1px solid #dfe6ec;
   box-sizing: border-box;
 }

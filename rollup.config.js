@@ -12,6 +12,16 @@ const config = {
   input: "./src/index.js", // 必须，入口文件
   output: [
     {
+      file: "dist/chinadep.cjs.js",
+      format: "cjs",
+      exports: "default",
+      globals: {
+        lodash: "lodash",
+        vuex: "vuex",
+        "vue-codemirror": "vue-codemirror",
+      },
+    },
+    {
       file: "dist/chinadep.umd.js",
       format: "umd",
       name: "chinadep",
