@@ -8,7 +8,6 @@
     "index.html"
   ],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "dev": "npx rollup -c -w",
     "build": "npx rollup -c rollup.config.js"
   },
