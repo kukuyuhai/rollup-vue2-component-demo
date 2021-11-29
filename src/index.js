@@ -1,10 +1,10 @@
-import LoginBox from "./login.vue"
-// import CodemirrorTab from "./modules/http/CodemirrorTab.vue"
+import CodemirrorTab from "./modules/http/CodemirrorTab.vue"
 import HttpSection from "./modules/http/HttpSection.vue"
-// import HttpUri from "./modules/http/HttpUri.vue"
+import HttpUri from "./modules/http/HttpUri.vue"
 import RequestMeta from "./modules/http/RequestMeta.vue"
+import RequestDescription from "./modules/http/RequestDescription.vue"
 
-const components = [LoginBox, HttpSection, RequestMeta]
+const components = [HttpSection, RequestMeta, CodemirrorTab, HttpUri, RequestDescription]
 
 const install = (Vue, options = {}) => {
   components.forEach(comp => {
@@ -21,4 +21,10 @@ if (typeof window !== "undefined" && window.Vue) {
 export default {
   install,
   version: "1.0.0",
+  // http description
+  HttpSection,
+  RequestMeta,
+  CodemirrorTab,
+  HttpUri,
+  RequestDescription,
 }

@@ -69,13 +69,14 @@
 </template>
 
 <script>
-import Codemirror from "@/components/Codemirror"
+import Codemirror from "@/components/Codemirror/index.vue"
 import HttpSection from "./HttpSection.vue"
 import RequestMeta from "./RequestMeta.vue"
 import CodemirrorTab from "./CodemirrorTab.vue"
 import HttpUri from "./HttpUri.vue"
 
 export default {
+  name: "RequestDescription",
   props: {
     baseInfo: {
       type: Object,

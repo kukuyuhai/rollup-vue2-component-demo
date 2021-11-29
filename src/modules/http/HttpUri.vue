@@ -24,9 +24,10 @@
 
 <script>
 import { mapGetters } from "vuex"
-import clip from "@/utils/clipboard" // use clipboard directly
+import clip from "@/utils/clipboard.js" // use clipboard directly
 
 export default {
+  name: "HttpUri",
   props: {
     data: {
       type: Object,

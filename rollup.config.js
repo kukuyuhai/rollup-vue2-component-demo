@@ -2,8 +2,6 @@ import resolve from "@rollup/plugin-node-resolve"
 import vue from "rollup-plugin-vue"
 import babel from "@rollup/plugin-babel"
 import commonjs from "@rollup/plugin-commonjs"
-import livereload from "rollup-plugin-livereload"
-import serve from "rollup-plugin-serve"
 import { terser } from "rollup-plugin-terser"
 import alias from "@rollup/plugin-alias"
 import css from "rollup-plugin-css-only"
@@ -27,6 +25,7 @@ const config = {
       file: "dist/chinadep.min.js",
       format: "iife",
       name: "chinadep",
+      plugins: [terser()],
       globals: {
         lodash: "lodash",
         vuex: "vuex",
@@ -41,16 +40,12 @@ const config = {
   ],
   external: ["vuex", "element-ui", "jsonlint", "vue-codemirror", "lodash"],
   plugins: [
-    // livereload(),
     json(),
-    serve({
-      open: true, // 自动打开页面
-      port: 8080,
-      openPage: "/index.html", // 打开的页面
-      contentBase: "",
-    }),
     // 引入的插件在这里配置
-    resolve({ preferBuiltins: true }),
+    resolve({
+      preferBuiltins: true,
+      extensions: [".tsx", ".ts", ".jsx", ".js", ".vue"],
+    }),
     commonjs(),
     vue({
       css: false,
