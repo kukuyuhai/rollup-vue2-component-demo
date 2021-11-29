@@ -15,6 +15,7 @@ const config = {
       file: "dist/chinadep.cjs.js",
       format: "cjs",
       exports: "default",
+      plugins: [terser()],
       globals: {
         lodash: "lodash",
         vuex: "vuex",
@@ -25,6 +26,7 @@ const config = {
       file: "dist/chinadep.umd.js",
       format: "umd",
       name: "chinadep",
+      plugins: [terser()],
       globals: {
         lodash: "lodash",
         vuex: "vuex",
