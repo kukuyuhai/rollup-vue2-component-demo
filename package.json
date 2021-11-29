@@ -1,6 +1,6 @@
 {
   "name": "chinadep",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "chinadep",
   "main": "./dist/chinadep.umd.js",
   "module": "./dist/chinadep.esm.js",
