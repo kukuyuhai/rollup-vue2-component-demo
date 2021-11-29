@@ -462,8 +462,7 @@ if (typeof window !== "undefined" && window.Vue) {
 
 var index = {
   install: install,
-  version: "1.0.0",
-  CodemirrorTab: CodemirrorTab
+  version: "1.0.0"
 };
 
 export { index as default };

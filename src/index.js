@@ -21,5 +21,4 @@ if (typeof window !== "undefined" && window.Vue) {
 export default {
   install,
   version: "1.0.0",
-  CodemirrorTab,
 }

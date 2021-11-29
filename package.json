@@ -2,7 +2,8 @@
   "name": "chinadep",
   "version": "1.0.2",
   "description": "chinadep",
-  "main": "./dist/lib.esm.js",
+  "main": "./dist/chinadep.umd.js",
+  "module": "./dist/chinadep.esm.js",
   "files": [
     "dist",
     "index.html"
