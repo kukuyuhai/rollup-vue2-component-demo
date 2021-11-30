@@ -5,6 +5,10 @@ import RequestMeta from "./modules/http/RequestMeta.vue"
 import RequestDescription from "./modules/http/RequestDescription.vue"
 // common
 import AutoFillTable from "./modules/common/AutoFillTable.vue"
+import Breadcrumb from "../modules/common/Breadcrumb.vue"
+import SearchItem from "../modules/common/SearchItem.vue"
+import TryUseModal from "../modules/common/TryUseModal.vue"
+import CommonPanel from "../modules/common/CommonPanel.vue"
 
 const components = [
   HttpSection,

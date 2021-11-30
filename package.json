@@ -2,10 +2,10 @@
   "name": "chinadep",
   "version": "1.0.8",
   "description": "chinadep",
-  "main": "dist/chinadep.cjs.js",
-  "module": "dist/chinadep.esm.js",
+  "main": "lib/chinadep.cjs.js",
+  "module": "lib/chinadep.esm.js",
   "files": [
-    "dist",
+    "lib",
     "index.html"
   ],
   "scripts": {

@@ -14,7 +14,7 @@ const config = {
   input: "./src/index.js", // 必须，入口文件
   output: [
     {
-      file: "dist/chinadep.cjs.js",
+      file: "lib/chinadep.cjs.js",
       format: "cjs",
       exports: "default",
       globals: {
@@ -24,7 +24,7 @@ const config = {
       },
     },
     {
-      file: "dist/chinadep.umd.js",
+      file: "lib/chinadep.umd.js",
       format: "umd",
       name: "chinadep",
       globals: {
@@ -36,7 +36,7 @@ const config = {
       },
     },
     {
-      file: "dist/chinadep.min.js",
+      file: "lib/chinadep.min.js",
       format: "iife",
       name: "chinadep",
       plugins: [terser()],
@@ -49,7 +49,7 @@ const config = {
       },
     },
     {
-      file: "dist/chinadep.esm.js",
+      file: "lib/chinadep.esm.js",
       format: "esm",
       exports: "default",
     },
