@@ -1,6 +1,6 @@
 {
   "name": "chinadep",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "chinadep",
   "main": "dist/chinadep.cjs.js",
   "module": "dist/chinadep.esm.js",
