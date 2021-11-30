@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: "Breadcrumb",
   props: {
     title: {
       type: String,

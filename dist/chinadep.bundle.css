@@ -16,7 +16,34 @@
   pointer-events: none;
 }
 
-/*# sourceMappingURL=HttpUri.vue.map */.section[data-v-08d377c8] {
+/*# sourceMappingURL=HttpUri.vue.map */.section[data-v-096cc92d] {
+  margin-top: 30px;
+}
+.section .tabs[data-v-096cc92d] {
+  height: 32px;
+  margin-bottom: 10px;
+}
+.section .tabs .tab-item[data-v-096cc92d] {
+  height: 100%;
+  width: 88px;
+  border: 1px solid #d9d9d9;
+  color: #666;
+  float: left;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+.section .tabs .tab-item[data-v-096cc92d]:not(:first-child) {
+  border-left: none;
+}
+.section .tabs .tab-item.active[data-v-096cc92d] {
+  border: 1px solid #357fed;
+  color: #357fed;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=CodemirrorTab.vue.map */.section[data-v-08d377c8] {
   margin-top: 30px;
 }
 .section .sub-title[data-v-08d377c8] {
@@ -57,34 +84,38 @@
   top: 15px;
 }
 
-/*# sourceMappingURL=HttpSection.vue.map */.section[data-v-096cc92d] {
-  margin-top: 30px;
+/*# sourceMappingURL=HttpSection.vue.map */.autofill[data-v-80eae0e2] {
+  display: inline-block;
 }
-.section .tabs[data-v-096cc92d] {
-  height: 32px;
+.autofill-table[data-v-80eae0e2] {
   margin-bottom: 10px;
 }
-.section .tabs .tab-item[data-v-096cc92d] {
-  height: 100%;
-  width: 88px;
-  border: 1px solid #d9d9d9;
-  color: #666;
-  float: left;
-  line-height: 30px;
+.autofill-textarea[data-v-80eae0e2] {
+  min-width: 100%;
+  height: calc(100vh - 400px);
+  border: 1px solid #ccc;
+  outline: none;
+  overflow: auto;
+}
+.autofill ul[data-v-80eae0e2],
+.autofill ol[data-v-80eae0e2] {
+  margin: 0;
+  padding: 0;
+}
+.autofill table[data-v-80eae0e2] {
+  border-bottom: 1px solid #ccc;
+}
+.autofill td[data-v-80eae0e2] {
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 0 10px;
   text-align: center;
-  font-size: 14px;
-  cursor: pointer;
 }
-.section .tabs .tab-item[data-v-096cc92d]:not(:first-child) {
-  border-left: none;
-}
-.section .tabs .tab-item.active[data-v-096cc92d] {
-  border: 1px solid #357fed;
-  color: #357fed;
-  font-weight: bold;
+.autofill td[data-v-80eae0e2]:first-child {
+  border-left: 1px solid #ccc;
 }
 
-/*# sourceMappingURL=CodemirrorTab.vue.map */.code-mirror[data-v-8623d7ce] {
+/*# sourceMappingURL=AutoFillTable.vue.map */.code-mirror[data-v-8623d7ce] {
   border: 1px solid #dfe6ec;
   box-sizing: border-box;
 }

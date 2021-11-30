@@ -6,6 +6,8 @@ import { terser } from "rollup-plugin-terser"
 import alias from "@rollup/plugin-alias"
 import css from "rollup-plugin-css-only"
 import json from "@rollup/plugin-json"
+
+import { getBabelOutputPlugin } from "@rollup/plugin-babel"
 // import pkg from "./package.json"
 
 const config = {
@@ -15,7 +17,6 @@ const config = {
       file: "dist/chinadep.cjs.js",
       format: "cjs",
       exports: "default",
-      plugins: [terser()],
       globals: {
         lodash: "lodash",
         vuex: "vuex",
@@ -26,11 +27,12 @@ const config = {
       file: "dist/chinadep.umd.js",
       format: "umd",
       name: "chinadep",
-      plugins: [terser()],
       globals: {
         lodash: "lodash",
         vuex: "vuex",
         "vue-codemirror": "vue-codemirror",
+        clipboard: "clipboard",
+        vue: "vue",
       },
     },
     {
@@ -42,6 +44,8 @@ const config = {
         lodash: "lodash",
         vuex: "vuex",
         "vue-codemirror": "vue-codemirror",
+        clipboard: "clipboard",
+        vue: "vue",
       },
     },
     {
@@ -50,7 +54,7 @@ const config = {
       exports: "default",
     },
   ],
-  external: ["vuex", "element-ui", "jsonlint", "vue-codemirror", "lodash"],
+  external: ["vue", "clipboard", "vuex", "element-ui", "jsonlint", "vue-codemirror", "lodash"],
   plugins: [
     json(),
     // 引入的插件在这里配置
@@ -64,11 +68,12 @@ const config = {
       compileTemplate: true,
       target: "browser",
     }),
-    babel({
-      exclude: "**/node_modules/**",
-      babelHelpers: "bundled",
-    }),
     css({ output: "chinadep.bundle.css" }),
+    babel({
+      babelHelpers: "runtime",
+      extensions: [".tsx", ".ts", ".jsx", ".js", ".vue"],
+      exclude: ["**/node_modules/**"],
+    }),
     // alias
     alias({
       entries: [

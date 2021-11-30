@@ -3,8 +3,21 @@ import HttpSection from "./modules/http/HttpSection.vue"
 import HttpUri from "./modules/http/HttpUri.vue"
 import RequestMeta from "./modules/http/RequestMeta.vue"
 import RequestDescription from "./modules/http/RequestDescription.vue"
+// common
+import AutoFillTable from "./modules/common/AutoFillTable.vue"
 
-const components = [HttpSection, RequestMeta, CodemirrorTab, HttpUri, RequestDescription]
+const components = [
+  HttpSection,
+  RequestMeta,
+  CodemirrorTab,
+  HttpUri,
+  RequestDescription,
+  AutoFillTable,
+  Breadcrumb,
+  CommonPanel,
+  SearchItem,
+  TryUseModal,
+]
 
 const install = (Vue, options = {}) => {
   components.forEach(comp => {
@@ -21,10 +34,14 @@ if (typeof window !== "undefined" && window.Vue) {
 export default {
   install,
   version: "1.0.0",
-  // http description
   HttpSection,
   RequestMeta,
   CodemirrorTab,
   HttpUri,
   RequestDescription,
+  AutoFillTable,
+  Breadcrumb,
+  CommonPanel,
+  SearchItem,
+  TryUseModal,
 }

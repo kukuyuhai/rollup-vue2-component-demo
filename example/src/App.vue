@@ -2,13 +2,17 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <RequestDescription />
+    <!-- <RequestDescription /> -->
+    <HttpSection title="请求示例" :data="[]"></HttpSection>
+    <HttpUri :data="{ uri: 'ddddd' }"></HttpUri>
+    <RequestMeta />
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  components: {},
 }
 </script>
 
