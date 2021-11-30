@@ -1,6 +1,6 @@
 {
   "name": "chinadep",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "chinadep",
   "main": "lib/chinadep.cjs.js",
   "module": "lib/chinadep.esm.js",
