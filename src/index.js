@@ -7,7 +7,7 @@ import RequestDescription from "./modules/http/RequestDescription.vue"
 import AutoFillTable from "./modules/common/AutoFillTable.vue"
 import Breadcrumb from "./modules/common/Breadcrumb.vue"
 import SearchItem from "./modules/common/SearchItem.vue"
-import TryUseModal from "./modules/common/TryUseModal.vue"
+// import TryUseModal from "./modules/common/TryUseModal.vue"
 import CommonPanel from "./modules/common/CommonPanel.vue"
 
 const components = [
@@ -20,7 +20,7 @@ const components = [
   Breadcrumb,
   CommonPanel,
   SearchItem,
-  TryUseModal,
+  // TryUseModal,
 ]
 
 const install = (Vue, options = {}) => {
@@ -47,5 +47,5 @@ export default {
   Breadcrumb,
   CommonPanel,
   SearchItem,
-  TryUseModal,
+  // TryUseModal,
 }

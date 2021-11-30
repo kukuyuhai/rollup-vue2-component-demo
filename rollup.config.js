@@ -6,9 +6,14 @@ import { terser } from "rollup-plugin-terser"
 import alias from "@rollup/plugin-alias"
 import css from "rollup-plugin-css-only"
 import json from "@rollup/plugin-json"
+import path from "path"
 
 import { getBabelOutputPlugin } from "@rollup/plugin-babel"
 // import pkg from "./package.json"
+const customResolver = resolve({
+  extensions: [".mjs", ".js", ".jsx", ".json", ".sass", ".scss"],
+})
+const projectRootDir = path.resolve(__dirname)
 
 const config = {
   input: "./src/index.js", // 必须，入口文件
@@ -57,32 +62,34 @@ const config = {
   external: ["vue", "clipboard", "vuex", "element-ui", "jsonlint", "vue-codemirror", "lodash"],
   plugins: [
     json(),
+
     // 引入的插件在这里配置
     resolve({
       preferBuiltins: true,
       extensions: [".tsx", ".ts", ".jsx", ".js", ".vue"],
     }),
-    commonjs(),
+    // alias
+    alias({
+      entries: [
+        { find: "@", replacement: path.resolve(projectRootDir, "src") },
+        {
+          find: "@modules",
+          replacement: path.resolve(projectRootDir, "src/modules"),
+        },
+      ],
+      customResolver,
+    }),
     vue({
       css: false,
       compileTemplate: true,
       target: "browser",
     }),
     css({ output: "chinadep.bundle.css" }),
+    commonjs(),
     babel({
       babelHelpers: "runtime",
       extensions: [".tsx", ".ts", ".jsx", ".js", ".vue"],
       exclude: ["**/node_modules/**"],
-    }),
-    // alias
-    alias({
-      entries: [
-        { find: "@", replacement: "./src" },
-        {
-          find: "@modules",
-          replacement: "./src/modules",
-        },
-      ],
     }),
   ],
 }
